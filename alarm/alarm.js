@@ -32,7 +32,7 @@ const timer = function () {
                     alarm.pause()
                     setTimeout(() => {
                         alarm.play()
-                    }, 10000)
+                    }, 180000)
                 })
 
                 dismiss.addEventListener('click', () => {
@@ -52,7 +52,7 @@ const timer = function () {
         button.style.backgroundColor = 'lightgreen'; 
         button.style.borderRadius = '0.3rem';
 
-        div.textContent = `Alarm set for ${hoursLeft} hour${hoursLeft > 1 ? 's': ''} and ${minutesLeft} minute${minutesLeft > 1 ? 's': ''} from now`
+        div.textContent = `Alarm set for ${hoursLeft} hour${hoursLeft > 1 || hoursLeft == 0 ? 's': ''} and ${minutesLeft} minute${minutesLeft > 1 || minutesLeft == 0 ? 's': ''} from now`
 
         setTimeout(() => {
             div.textContent = ''
