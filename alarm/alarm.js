@@ -21,11 +21,13 @@ const timer = function () {
             if (inSeconds < 0) {
                 clearInterval(go);
                 alarm.play();
-                div.innerHTML = `<button style="">Snooze</button>
-                                 <button style="">Dismiss</button>`
-                const buttons = div.querySelectorAll('button'); 
+                div.innerHTML = `<button>Snooze</button>
+                                 <button>Dismiss</button>`
+
+                const buttons = div.querySelectorAll('button');
                 const snooze = buttons[0];
                 const dismiss = buttons[1];
+
                 snooze.addEventListener('click', () => {
                     alarm.pause()
                     setTimeout(() => {
