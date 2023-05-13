@@ -4,17 +4,12 @@
     "version": "1.0.1",
     "incognito": "split",
     "permissions": [
-        "storage",
-         "tabs", 
-         "alarms"
+         "tabs"
     ],
     "background": {
         "service_worker": "background.js", 
         "type": "module"
     },
-    "host_permissions": [
-
-    ],
     "content_scripts": [
       {
         "js": ["alarm.js"],

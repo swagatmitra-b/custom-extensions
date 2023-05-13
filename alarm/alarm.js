@@ -19,44 +19,7 @@ const timer = function () {
       target[1]
     );
 
-    function count() {
-      let now = new Date();
-      let inSeconds = (targetTime - now) / 1000;
-      console.log(inSeconds.toFixed(0));
-
-      if (inSeconds < 0) {
-        clearInterval(go);
-        alarm.play();
-        div.innerHTML = `<button>Snooze</button>
-                                 <button>Dismiss</button>`;
-
-        const buttons = div.querySelectorAll("button");
-        const snooze = buttons[0];
-        const dismiss = buttons[1];
-
-        snooze.addEventListener("click", () => {
-          alarm.pause();
-          div.style.display = "none";
-          
-          setTimeout(() => {
-            div.textContent = 'Snoozed for 3 minutes'
-          }, 3000)
-
-          setTimeout(() => {
-            alarm.play();
-            div.style.display = "block";
-          }, 180000);
-        });
-
-        dismiss.addEventListener("click", () => {
-          alarm.pause();
-          alarm.currentTime = 0;
-          div.innerHTML = "";
-        });
-      }
-    }
-
-    const go = setInterval(count, 1000);
+    targetTime = targetTime.getTime();
 
     const seconds = (targetTime - today) / 1000;
     const hoursLeft = Math.floor(seconds / 3600) % 24;
@@ -74,6 +37,34 @@ const timer = function () {
     setTimeout(() => {
       div.textContent = "";
     }, 5000);
+
+    chrome.runtime.sendMessage({ targetTime }, (response) => {
+      if (response.message == "play") {
+        alarm.play();
+        div.innerHTML = `<button>Snooze</button>
+        <button>Dismiss</button>`;
+
+        const buttons = div.querySelectorAll("button");
+        const snooze = buttons[0];
+        const dismiss = buttons[1];
+
+        snooze.addEventListener("click", () => {
+          alarm.pause();
+          div.style.display = "none"
+          
+          setTimeout(() => {
+            alarm.play();
+            div.style.display = "block";
+          }, 180000);
+        });
+
+        dismiss.addEventListener("click", () => {
+          alarm.pause();
+          alarm.currentTime = 0;
+          div.innerHTML = "";
+        });
+      }
+    });
   });
 };
 
