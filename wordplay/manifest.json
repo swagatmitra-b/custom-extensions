@@ -5,12 +5,12 @@
   "incognito": "split",
   "content_scripts": [
     {
-      "js": ["thesaurus.js"],
+      "js": ["wordplay.js"],
       "matches": ["<all_urls>"]
     }
   ],
   "action": {
-    "default_title": "wordplay.js",
+    "default_title": "Wordplay",
     "default_popup": "popup.html"
   }
 }
