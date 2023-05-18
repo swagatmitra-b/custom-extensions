@@ -10,7 +10,7 @@
     }
   ],
   "action": {
-    "default_title": "thesaurus",
+    "default_title": "wordplay.js",
     "default_popup": "popup.html"
   }
 }

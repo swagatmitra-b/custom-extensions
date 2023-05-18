@@ -1,1 +1,1 @@
-## hilariously inspiring side-project
+## hilariously inspired side-project
