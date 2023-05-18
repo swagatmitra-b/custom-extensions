@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Wordplay",
+  "version": "1.0.1",
+  "incognito": "split",
+  "content_scripts": [
+    {
+      "js": ["thesaurus.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_title": "thesaurus",
+    "default_popup": "popup.html"
+  }
+}
