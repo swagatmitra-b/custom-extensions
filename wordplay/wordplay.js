@@ -7,7 +7,6 @@ let mode = "ml";
 
 input.addEventListener("keyup", (e) => {
   word = e.target.value;
-  console.log("word", word)
   if (e.key == "Enter") wordplay();
 });
 
@@ -27,8 +26,6 @@ selector.addEventListener("change", (e) => {
       mode = "rel_rhy";
       break;
   }
-  console.log(value);
-  console.log("word", word);
 });
 
 search.addEventListener("click", wordplay);
@@ -41,7 +38,6 @@ async function wordplay() {
     try {
       let response = await fetch(url);
       let data = await response.json();
-      console.log(data);
       data.forEach((wordObj) => {
         results.innerHTML += `<p>${wordObj.word}<p>`
       })
