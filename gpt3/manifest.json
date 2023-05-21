@@ -5,7 +5,7 @@
   "incognito": "split",
   "content_scripts": [
     {
-      "js": ["gpt.js"],
+      "js": ["gpt3.js"],
       "matches": ["<all_urls>"]
     }
   ],
