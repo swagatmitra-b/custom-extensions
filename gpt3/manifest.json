@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "gpt",
+  "name": "gpt3",
   "version": "1.0.1",
   "incognito": "split",
   "content_scripts": [
@@ -10,7 +10,7 @@
     }
   ],
   "action": {
-    "default_title": "gpt",
+    "default_title": "gpt3",
     "default_popup": "popup.html"
   }
 }
