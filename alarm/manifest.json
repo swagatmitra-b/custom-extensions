@@ -1,24 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "Alarm",
-    "version": "1.0.1",
-    "incognito": "split",
-    "permissions": [
-         "tabs"
-    ],
-    "background": {
-        "service_worker": "background.js", 
-        "type": "module"
-    },
-    "content_scripts": [
-      {
-        "js": ["alarm.js"],
-        "matches": ["<all_urls>"]
-      }
-    ], 
-    "action": {
-        "default_title": "alarm",
-        "default_popup": "popup.html"
+  "manifest_version": 3,
+  "name": "Alarm",
+  "version": "1.0.1",
+  "incognito": "split",
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": ["alarm.js"],
+      "matches": ["<all_urls>"]
     }
+  ],
+  "action": {
+    "default_title": "alarm",
+    "default_popup": "popup.html"
   }
-  
+}
