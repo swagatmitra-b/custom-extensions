@@ -6,7 +6,7 @@ let query;
 input.addEventListener("keyup", async (e) => {
   query = e.target.value;
   if (e.key == "Enter") {
-    fetching.textContent = "Fetching data...";
+    fetching.textContent = "Fetching reply...";
     input.blur();
     chatReq();
   }
