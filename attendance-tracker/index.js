@@ -6,8 +6,8 @@ const percentage = document.querySelector(".percentage");
 const input = document.querySelector("input");
 const selection = document.getElementById("selection");
 const clearRecord = document.getElementById("clear-record");
-const clearSubject = document.getElementById('clear-subject');
-const deleteSubject = document.getElementById('delete-subject');
+const clearSubject = document.getElementById("clear-subject");
+const deleteSubject = document.getElementById("delete-subject");
 
 let dayCounter = 0;
 let attendedCounter = 0;
@@ -23,24 +23,24 @@ clearRecord.onclick = () => {
     subjects.length = 0;
     subjectLoader();
     clearRecord.disabled = true;
-    location.reload() 
+    location.reload();
   }
 };
 
-clearSubject.addEventListener('change', () => {
-    deleteSubject.disabled = false;
+clearSubject.addEventListener("change", () => {
+  deleteSubject.disabled = false;
 });
 
 deleteSubject.onclick = () => {
-    const subject = clearSubject.value;
-    const index = subjects.indexOf(subject);
-    subjects.splice(index, 1);
-    console.log(subjects);
-    localStorage.setItem("subjects", JSON.stringify(subjects));
-    localStorage.removeItem(subject);
-    subjectLoader();
-    location.reload();
-}
+  const subject = clearSubject.value;
+  const index = subjects.indexOf(subject);
+  subjects.splice(index, 1);
+  console.log(subjects);
+  localStorage.setItem("subjects", JSON.stringify(subjects));
+  localStorage.removeItem(subject);
+  subjectLoader();
+  location.reload();
+};
 
 onload = () => {
   const subjectArray = JSON.parse(localStorage.getItem("subjects")) || [];
@@ -171,5 +171,5 @@ function forFuncSake(attendedDays, total) {
 }
 
 clearSubject.onchange = (e) => {
-    console.log(e.currentTarget);
-}
+  console.log(e.currentTarget);
+};
