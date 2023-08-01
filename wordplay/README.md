@@ -1,8 +1,3 @@
 ### WordPlay
 
-Steps to install -->
-
-1. Open the "Extenions" tab in Chrome by navigating to "chrome://extensions" in the search bar. 
-2. Turn on Developer mode (if you haven't already) and click on "Load unpacked" in the upper toolbar.
-3. Select the wordplay folder.
-4. Turn on the extension and use it!
+This is an extremely useful tool if you need synomyms of words on the fly while surfing the net. It can also provide you with homonyms, homophones and rhyming words. Check out the steps in the repo's README to install it!
