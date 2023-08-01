@@ -1,1 +1,1 @@
-### Sabotage your \<img> tags
+### Be wary of your \<img> tags

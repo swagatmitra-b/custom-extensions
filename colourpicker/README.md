@@ -1,1 +1,1 @@
-### colour picker to pick colours
+### Colour picker to pick colours 🎨
