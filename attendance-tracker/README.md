@@ -10,6 +10,8 @@
 
 - Select any course from the drop-down list and update your attendance using the buttons.
 
+- Make sure to ALWAYS SELECT THE CORRECT SUBJECT from the drop-down list before updating your attendence. 
+
 - The values are persistent and stored in your browser. 
 
 - You can click on 'Clear Records' button to clear all subjects and attendance records. 

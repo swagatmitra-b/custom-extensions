@@ -106,6 +106,7 @@ input.addEventListener("keypress", (e) => {
     localStorage.setItem("subjects", JSON.stringify(subjects));
     subjectLoader();
     clearRecord.disabled = false;
+    input.value = '';
   }
 });
 
