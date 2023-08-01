@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="choice">
+        <h3>Enter a subject</h3>
+        <input type="text" />
+        <h3>Select a subject</h3>
+        <select id="selection"></select>
+        <h3>Delete a subject</h3>
+        <div class="clear">
+            <select id="clear-subject"></select>
+            <button id="delete-subject" disabled>Delete Subject</button>
+        </div>
+        <button id="clear-record" disabled>Clear Records</button>
+      </div>
+      <div class="buttons">
+        <h3>Classes Attended</h3>
+        <div class="controls">
+          <button class="decrementer">-</button>
+          <span class="attended">0</span>
+          <button class="incrementer">+</button>
+        </div>
+        <h3>Total Classes</h3>
+        <div class="controls">
+          <button class="decrementer">-</button>
+          <span class="total">0</span>
+          <button class="incrementer">+</button>
+        </div>
+      </div>
+      <div class="percent">
+        <h3>Attendance percentage:</h3>
+        <span class="percentage">0%</span>
+      </div>
+    </div>
+  </body>
+</html>
