@@ -32,10 +32,10 @@ clearSubject.addEventListener("change", () => {
 });
 
 deleteSubject.onclick = () => {
+  if (!confirm('Are you sure you want to remove this subject?')) return;
   const subject = clearSubject.value;
   const index = subjects.indexOf(subject);
   subjects.splice(index, 1);
-  console.log(subjects);
   localStorage.setItem("subjects", JSON.stringify(subjects));
   localStorage.removeItem(subject);
   subjectLoader();
@@ -44,13 +44,11 @@ deleteSubject.onclick = () => {
 
 onload = () => {
   const subjectArray = JSON.parse(localStorage.getItem("subjects")) || [];
-  console.log(subjectArray);
   if (subjectArray.length == 0) return;
   else {
     clearRecord.disabled = false;
     subjects = subjectArray;
     subjectLoader();
-    console.log(selection.value);
     const subject = JSON.parse(localStorage.getItem(selection.value));
     if (!subject) return;
     let [attendedDays, total] = subject;
@@ -106,7 +104,6 @@ input.addEventListener("keypress", (e) => {
     if (subjects.includes(e.target.value) || e.target.value == " ") return;
     subjects.push(e.target.value);
     localStorage.setItem("subjects", JSON.stringify(subjects));
-    console.log(subjects);
     subjectLoader();
     clearRecord.disabled = false;
   }
@@ -138,7 +135,6 @@ function subjectLoader() {
 }
 
 selection.addEventListener("change", () => {
-  console.log(selection.value);
   const subject = JSON.parse(localStorage.getItem(selection.value));
   if (!subject) {
     attendedCounter = 0;
@@ -148,7 +144,6 @@ selection.addEventListener("change", () => {
     calculatePercent(attendedCounter, dayCounter);
     return;
   }
-  console.log(subject);
   let [attendedDays, total] = subject;
   forFuncSake(attendedDays, total);
 });
@@ -169,7 +164,3 @@ function forFuncSake(attendedDays, total) {
   totalDays.innerText = dayCounter;
   calculatePercent(attendedCounter, dayCounter);
 }
-
-clearSubject.onchange = (e) => {
-  console.log(e.currentTarget);
-};

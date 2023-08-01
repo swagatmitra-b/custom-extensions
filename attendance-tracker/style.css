@@ -50,6 +50,10 @@ button {
     width: 6.5rem;
 }
 
+#delete-subject {
+    width: 7rem;
+}
+
 #clear-record {
     position: relative;
     top: 1rem;

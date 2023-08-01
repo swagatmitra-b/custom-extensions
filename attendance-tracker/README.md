@@ -14,6 +14,6 @@
 
 - You can click on 'Clear Records' button to clear all subjects and attendance records. 
 
-- To delete a subject, select a subject from the 'Delete a subject' drop-down list. Click on the 'Delete Subject' button on its right.
+- To remove a subject, select a subject from the 'Remove a subject' drop-down list. Click on the 'Remove Subject' button on its right.
 
-Even if you aren't consistent with your attendence, be consistent in updating them here if you care about it.
+Even if you aren't consistent with your attendence (not encouraged), be consistent in updating them here if you care about it.
