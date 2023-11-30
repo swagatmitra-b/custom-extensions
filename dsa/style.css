@@ -1,0 +1,15 @@
+
+
+.box, .heading1, .heading2, .container {
+    display: flex;
+}
+
+.container {
+    gap: 1.5rem
+}
+
+span {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-left: 0.3rem;
+}
