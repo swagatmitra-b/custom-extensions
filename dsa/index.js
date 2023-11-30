@@ -43,14 +43,14 @@ const questionLoader = () => {
   for (let { name, link } of current.completed) {
     sectionDone.innerHTML += `
             <div class="box">
-              <input type="checkbox" class="check" checked> <a href="${link}">${name}</a>
+              <input type="checkbox" class="check" checked> <a href="${link}" target="_blank">${name}</a>
             </div>
           `;
   }
   for (let { name, link } of current.remaining) {
     sectionRem.innerHTML += `
             <div class="box">
-              <input type="checkbox" class="check"> <a href="${link}">${name}</a>
+              <input type="checkbox" class="check"> <a href="${link}" target="_blank">${name}</a>
             </div>
           `;
   }

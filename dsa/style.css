@@ -1,7 +1,9 @@
-
-
 .box, .heading1, .heading2, .container {
     display: flex;
+}
+
+.box {
+    margin-bottom: 0.4rem;
 }
 
 .container {
