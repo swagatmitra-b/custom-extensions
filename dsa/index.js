@@ -39,7 +39,6 @@ const loader = () => {
 };
 
 const questionLoader = () => {
-  console.log(current.completed, current.remaining);
   for (let { name, link } of current.completed) {
     sectionDone.innerHTML += `
             <div class="box">
@@ -60,7 +59,6 @@ const domLoad = () => {
   let questions = JSON.parse(localStorage.getItem("questions")) || [];
   if (questions.length == 0) current = qs;
   else current = questions;
-  console.log(current);
   sectionDone.innerHTML = "";
   sectionRem.innerHTML = "";
   questionLoader();
